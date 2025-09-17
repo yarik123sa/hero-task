@@ -85,7 +85,7 @@ const close = () => {
         <transition name="menu">
           <div
             v-if="open"
-            class="absolute left-0 top-0  w-full bg-secondary-medium-white p-6 text-primary-muted shadow-xl h-screen"
+            class="absolute z-20 left-0 top-0   w-full bg-secondary-medium-white p-6 text-primary-muted shadow-xl h-screen"
             @click="close"
           >
             <div

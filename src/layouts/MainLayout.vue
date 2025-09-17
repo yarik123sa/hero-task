@@ -4,7 +4,7 @@ import Header from '@/components/Common/Header.vue'
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col pt-[200px]">
+  <div class="min-h-screen flex flex-col   pt-[83px] xs:pt-[129px] xl:pt-[200px]">
     <Header />
 
     <main class="flex-grow ">
