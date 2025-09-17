@@ -1,0 +1,87 @@
+body {
+  @apply font-gilroy bg-primary-light h-full;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('@/assets/fonts/Gilroy/Gilroy-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('@/assets/fonts/Gilroy/Gilroy-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('@/assets/fonts/Gilroy/Gilroy-Black.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('@/assets/fonts/Gilroy/Gilroy-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+.swiper-button-next::after {
+  display: none !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  all: unset;
+  display: inline-flex;
+  position: static;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.swiper-pagination-bullet {
+  background: #fff !important;
+  width: 12px !important;
+  height: 12px !important;
+  outline: 3px solid white;
+}
+.swiper-pagination-bullet-active {
+  background: #db4444 !important;
+}
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 7px;
+  gap: 7px;
+}
+.section-subtitle {
+  font-weight: 600;
+  color: #db4444;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.section-subtitle::before {
+  content: '';
+  display: inline-block;
+  height: 40px;
+  width: 20px;
+  background: #db4444;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src && prettier --ignore-path .eslintignore . --write"
+  },
+  "dependencies": {
+    "swiper": "^11.2.6",
+    "vue": "^3.5.13",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+
+    "@types/node": "^20.4.5",
+    "@types/vue-router": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "postcss": "^8.4.21",
+    "postcss-nesting": "^11.2.1",
+    "prettier": "2.8.3",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^5.1.6",
+    "vite": "^4.0.0"
+  }
+}
