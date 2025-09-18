@@ -13,7 +13,7 @@ const close = () => {
 
 <template>
   <div class="relative">
-    <header class="fixed inset-0 bg-[url('/src/assets/images/up.png')] bg-no-repeat bg-center bg-cover">
+    <header class="fixed inset-0 ">
       <div class="relative z-10" >
         <div class="py-[34px]">
           <div class="container">

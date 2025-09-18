@@ -44,21 +44,17 @@ const testDataFeatureCards: IFeatureCard[] = [
 
 <template>
 <section class="container">
-  <div class="title mb-44 text-5xl">What is Backyard?</div>
-  <div class="md:flex justify-between gap-8 hidden">
+  <div class="title mb-9 xl:mb-4 text-5xl">What is Backyard?</div>
+  <div class="flex max-xl:hidden  justify-between gap-8">
     <FeatureCard
       v-for="(card, index) in testDataFeatureCards"
       :key="index"
-      :image="card.image"
-      :alt="card.alt"
-      :title="card.title"
-      :step="card.step"
-      :description="card.description"
+      :data="card"
     />
   </div>
   <CardSlider
-    class="md:hidden block"
-
+    class="xl:hidden "
+    :data="testDataFeatureCards"
   />
 </section>
 </template>

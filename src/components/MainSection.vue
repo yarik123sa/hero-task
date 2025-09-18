@@ -3,7 +3,7 @@ import BaseButton from '@/components/Shared/BaseButton.vue'
 </script>
 
 <template>
-  <section class="relative z-1">
+  <section>
     <div class="container">
       <div class="flex items-center mb-10 md:mb-20 justify-between gap-4">
         <div>

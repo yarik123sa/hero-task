@@ -2,7 +2,7 @@
   <div class="relative">
     <swiper
       v-if="items && items.length"
-      class="w-full order-2"
+      class=" order-2"
       :modules="modules"
       :slides-per-view="slidesView"
       :slides-per-group="slidesPerGroup"
@@ -17,10 +17,12 @@
       :pagination="pagination"
       :grid="grid"
       :thumbs="useThumbs ? { swiper: thumbsSwiper } : undefined"
+
     >
       <swiper-slide
         v-for="(item, index) in items"
         :key="index"
+        class="!flex max-md:justify-center"
       >
         <slot
           name="slide"
@@ -47,7 +49,7 @@
       <swiper-slide
         v-for="(item, index) in items"
         :key="'thumb-' + index"
-        class="!w-[120px]"
+        class="!w-[120px] "
       >
         <slot
           name="thumb"
@@ -94,10 +96,6 @@ const onThumbsSwiper = (swiper: any) => {
 </script>
 
 <style scoped>
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none !important;
-}
 
 .thumbs-swiper :deep(.swiper-slide) {
   opacity: 0.5;
@@ -108,10 +106,4 @@ const onThumbsSwiper = (swiper: any) => {
   opacity: 1;
 }
 
-.thumbs-swiper :deep(.swiper-wrapper) {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  gap: 30px;
-}
 </style>

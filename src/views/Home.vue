@@ -4,6 +4,6 @@ import FeaturesSection from '@/components/FeaturesSection.vue'
 </script>
 
 <template>
-  <MainSection class="mb-32"/>
-  <FeaturesSection/>
+  <MainSection class="md:mb-32 mb-16"/>
+  <FeaturesSection class="md:mb-32 mb-16"/>
 </template>
