@@ -2,9 +2,13 @@
 import FeatureCard from '@/components/Common/FeatureCard.vue'
 import { IFeatureCard } from '@/types/Interfaces/feature-card'
 
+import SeedDrop from '@/assets/images/seed-drop.png'
+import Sprout from '@/assets/images/sprout.png'
+import MoneyPlant from '@/assets/images/money-plant.png'
+
 const testDataFeatureCards: IFeatureCard[] = [
   {
-    image: '@/assets/images/seed-drop.png',
+    image: SeedDrop,
     alt: 'Yield Aggregator illustration',
     title: 'Yield Aggregator',
     step: 1,
@@ -14,7 +18,7 @@ const testDataFeatureCards: IFeatureCard[] = [
     },
   },
   {
-    image: '@/assets/images/sprout.png',
+    image: Sprout,
     alt: 'Yield-backed Stablecoin illustration',
     title: 'Yield-backed Stablecoin',
     step: 2,
@@ -24,7 +28,7 @@ const testDataFeatureCards: IFeatureCard[] = [
     },
   },
   {
-    image: '@/assets/images/money-plant.png',
+    image: MoneyPlant,
     alt: 'Boost DeFi Liquidity illustration',
     title: 'Boost DeFi Liquidity',
     step: 3,
