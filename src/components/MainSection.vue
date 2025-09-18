@@ -12,9 +12,8 @@ import BaseButton from '@/components/Shared/BaseButton.vue'
             <span class="  flex md:inline gap-4">
               DeFi
               <img
-
                 src="@/assets/images/leaf-logo.png"
-                alt="leaf-Logo"
+                alt="Leaf logo"
                 class="w-[60px] h-[60px] block md:hidden"
               />
             </span>

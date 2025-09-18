@@ -23,7 +23,9 @@ module.exports = {
           white: "#fbfbfc",
           "muted-black": "#2D2D2D",
           light: "#efeff2",
-          "semi-black": "#6e6e6e", // rgba(38,38,38,0.55)
+          "semi-black": "#6e6e6e",
+          "dark-gray": "#2d322f",
+          "medium-gray": "#787878",
         },
         secondary: {
           'medium-white': "#f3f4f6",
@@ -42,5 +44,18 @@ module.exports = {
       fill: theme => theme('colors'),
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.title': {
+          fontFamily: 'var(--font-family, Archivo, sans-serif)',
+          fontWeight: '700',
+          fontSize: '48px',
+          lineHeight: '110%',
+          color: '#303030',
+        },
+      }
+      addUtilities(newUtilities, ['responsive'])
+    },
+  ],
 }
