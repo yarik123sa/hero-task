@@ -35,35 +35,14 @@
     <slot name="navigation" />
     <slot name="pagination" />
 
-    <swiper
-      v-if="useThumbs"
-      class="!overflow-visible thumbs-swiper"
-      :space-between="10"
-      :slides-per-view="4"
-      :loop="false"
-      :allow-touch-move="false"
-      watch-slides-visibility
-      watch-slides-progress
-      @swiper="onThumbsSwiper"
-    >
-      <swiper-slide
-        v-for="(item, index) in items"
-        :key="'thumb-' + index"
-        class="!w-[120px] "
-      >
-        <slot
-          name="thumb"
-          :item="item"
-          :index="index"
-        />
-      </swiper-slide>
-    </swiper>
+
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+
 import { Pagination, Navigation, EffectFade, Autoplay, Grid, Thumbs } from 'swiper/modules'
 
 const thumbsSwiper = ref(null)
@@ -79,7 +58,7 @@ defineProps<{
   items: any[]
   required: false
   default: () => []
-  pagination?: boolean | { clickable: boolean }
+  pagination?: Record<string, any>
   navigation?: boolean
   breakpoints?: Record<string, any>
   slidesPerGroup?: number

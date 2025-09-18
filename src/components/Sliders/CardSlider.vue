@@ -13,16 +13,19 @@ defineProps<{ data: IFeatureCard[] }>()
       :slides-view="1"
       :space-between="0"
       slide-effect="Slide"
-      slide-start="0"
+      :slide-start = "0"
       :items="data"
+      :loop="true"
       :required="false"
       :default="() => []"
-      :pagination="{ clickable: true }"
+      :pagination="{ el: '.custom-pagination', clickable: true }"
+
     >
       <template #slide="{ item }">
         <FeatureCard :data="item" />
       </template>
     </Slider>
 
+    <div class="custom-pagination mt-5 flex "/>
   </div>
 </template>

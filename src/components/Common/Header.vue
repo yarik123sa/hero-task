@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import BaseButton from '@/components/Shared/BaseButton.vue'
 
 const open = ref(false)
@@ -9,15 +9,22 @@ const toggle = () => {
 const close = () => {
   open.value = false
 }
+watch(open, (val) => {
+  if (val) {
+    document.body.classList.add('overflow-hidden')
+  } else {
+    document.body.classList.remove('overflow-hidden')
+  }
+})
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative ">
     <header class="fixed inset-0 ">
-      <div class="relative z-10" >
+      <div class="relative z-10 " >
         <div class="py-[34px]">
           <div class="container">
-            <div class="relative z-10 grid grid-cols-2 items-center md:flex">
+            <div class="relative z-[50] grid grid-cols-2 items-center md:flex">
               <router-link to="/home">
                 <img
                   src="../../assets/images/logo.png"
