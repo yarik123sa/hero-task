@@ -8,12 +8,12 @@ defineProps<IFeatureCard>()
 
 <template>
   <div class="w-[340px]">
-    <div class="mb-4 relative">
-      <div class="absolute -top-36 left-1/2 -translate-x-1/2">
-        <img
-          :src="image"
-          :alt="alt"/>
-      </div>
+    <div class="translate-y-6 md:flex justify-center hidden">
+      <img
+        :src="image"
+        :alt="alt"/>
+    </div>
+    <div class="mb-4 ">
       <div class=" flex items-center bg-primary-white backdrop-blur-sm rounded-[45px] p-3">
         <div class="flex items-center justify-center w-8 h-8 bg-primary-dark-gray rounded-full text-primary-white font-archivo text-base leading-[140%] font-semibold ">
           {{step}}

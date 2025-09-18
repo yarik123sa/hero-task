@@ -5,6 +5,7 @@ import { IFeatureCard } from '@/types/Interfaces/feature-card'
 import SeedDrop from '@/assets/images/seed-drop.png'
 import Sprout from '@/assets/images/sprout.png'
 import MoneyPlant from '@/assets/images/money-plant.png'
+import CardSlider from '@/components/Sliders/CardSlider.vue'
 
 const testDataFeatureCards: IFeatureCard[] = [
   {
@@ -44,15 +45,20 @@ const testDataFeatureCards: IFeatureCard[] = [
 <template>
 <section class="container">
   <div class="title mb-44 text-5xl">What is Backyard?</div>
-  <div>
+  <div class="md:flex justify-between gap-8 hidden">
     <FeatureCard
       v-for="(card, index) in testDataFeatureCards"
       :key="index"
       :image="card.image"
       :alt="card.alt"
       :title="card.title"
+      :step="card.step"
       :description="card.description"
     />
   </div>
+  <CardSlider
+    class="md:hidden block"
+
+  />
 </section>
 </template>
