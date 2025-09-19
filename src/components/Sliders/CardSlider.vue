@@ -11,7 +11,7 @@ defineProps<{ data: IFeatureCard[] }>()
   <div>
     <Slider
       :slides-view="1"
-      :space-between="0"
+      :space-between="30"
       slide-effect="Slide"
       :slide-start = "0"
       :items="data"

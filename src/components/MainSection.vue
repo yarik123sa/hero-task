@@ -6,8 +6,8 @@ import BaseButton from '@/components/Shared/BaseButton.vue'
   <section>
     <div class="container">
       <div class="flex items-center mb-10 md:mb-20 justify-between gap-4">
-        <div>
-          <div class="text-[58px] md:text-[76px] xl:text-[90px] font-archivo font-semibold max-w-[1100px] leading-[110%] mb-4">
+        <div class="max-w-[1100px]">
+          <div class="text-[58px] md:text-[76px] xl:text-[90px] font-archivo font-semibold  leading-[110%] mb-4">
             The yield-backed stablecoin protocol boosting
             <span class="  flex md:inline gap-4">
               DeFi
@@ -19,7 +19,7 @@ import BaseButton from '@/components/Shared/BaseButton.vue'
             </span>
             liquidity
           </div>
-          <div class="text-2xl text-primary-semi-black text-gilroy">Keep your yield working for you — we keep your liquidity accessible</div>
+          <div class="text-2xl text-primary-semi-black text-gilroy max-w-full md:max-w-[700px]">Keep your yield working for you — we keep your liquidity accessible</div>
         </div>
         <div class=" hidden md:block">
           <img
@@ -32,7 +32,7 @@ import BaseButton from '@/components/Shared/BaseButton.vue'
       <div class="flex gap-5 xs:max-w-[558px]">
         <BaseButton
           view="primary"
-          class="w-full xs:min-w-[329px]"
+          class="w-full xs:min-w-[300px]"
           >Join Whitelist
         </BaseButton>
         <BaseButton

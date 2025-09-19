@@ -53,7 +53,7 @@ const testDataFeatureCards: IFeatureCard[] = [
     />
   </div>
   <CardSlider
-    class="xl:hidden "
+    class="xl:hidden"
     :data="testDataFeatureCards"
   />
 </section>
