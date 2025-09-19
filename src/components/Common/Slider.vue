@@ -69,20 +69,8 @@ defineProps<{
   useThumbs?: boolean
 }>()
 
-const onThumbsSwiper = (swiper: any) => {
-  thumbsSwiper.value = swiper
-}
 </script>
 
 <style scoped>
-
-.thumbs-swiper :deep(.swiper-slide) {
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.thumbs-swiper :deep(.swiper-slide-thumb-active) {
-  opacity: 1;
-}
 
 </style>

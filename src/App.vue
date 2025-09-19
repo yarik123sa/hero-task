@@ -18,7 +18,7 @@ const layout = computed(() => {
 </script>
 
 <template>
-  <div class="h-screen font-sans font-normal antialiased">
+  <div class="h-screen font-sans font-normal antialiased ">
     <component :is="layout">
       <router-view />
     </component>

@@ -19,48 +19,47 @@ watch(open, (val) => {
 </script>
 
 <template>
-  <div class="relative ">
-    <header class="fixed inset-0 ">
-      <div class="relative z-10 " >
-        <div class="py-[34px]">
-          <div class="container">
-            <div class="relative z-[50] grid grid-cols-2 items-center md:flex">
-              <router-link to="/home">
-                <img
-                  src="../../assets/images/logo.png"
-                  alt="logo"
-                  class="justify-self-start"
-                />
-              </router-link>
+  <header class="fixed top-0 left-0 right-0 z-10 px-4">
+    <div>
+      <div class="py-[34px]">
+        <div class="container">
+          <div class="relative z-[50] grid grid-cols-2 items-center md:flex">
+            <router-link to="/home">
+              <img
+                src="../../assets/images/logo.png"
+                alt="logo"
+                class="justify-self-start"
+              />
+            </router-link>
 
-              <nav
-                class="hidden md:block md:absolute md:left-1/2 md:-translate-x-1/2 bg-secondary-medium-white py-1 px-3 text-[13px] rounded-full text-primary-muted"
-              >
-                <div class="flex gap-4 items-center">
-                  <router-link
-                    class="active"
-                    to="/home"
-                    >Home
-                  </router-link>
-                  <router-link to="#">About</router-link>
-                  <router-link to="#">How it works</router-link>
-                  <router-link to="#">Token design</router-link>
-                  <router-link to="#">YARD flywheel</router-link>
-                </div>
-              </nav>
-              <BaseButton
-                view="primary"
-                class="block xl:hidden ml-auto btn "
-              >
-                Connect
-              </BaseButton>
+            <nav
+              class="hidden md:block md:absolute md:left-1/2 md:-translate-x-1/2 bg-secondary-medium-white py-1 px-3 text-[13px] rounded-full text-primary-muted"
+            >
+              <div class="flex gap-4 items-center min-w-[440px]">
+                <router-link
+                  class="active"
+                  to="/home"
+                >Home
+                </router-link>
+                <router-link to="#">About</router-link>
+                <router-link to="#">How it works</router-link>
+                <router-link to="#">Token design</router-link>
+                <router-link to="#">YARD flywheel</router-link>
+              </div>
+            </nav>
+            <BaseButton
+              view="primary"
+              class="block xl:hidden ml-auto btn "
+            >
+              Connect
+            </BaseButton>
 
-              <button
-                aria-label="Toggle menu"
-                :aria-expanded="open"
-                class="relative z-10 md:hidden justify-self-end inline-flex items-center rounded-full p-2"
-                @click="toggle"
-              >
+            <button
+              aria-label="Toggle menu"
+              :aria-expanded="open"
+              class="relative z-10 md:hidden justify-self-end inline-flex items-center rounded-full p-2"
+              @click="toggle"
+            >
                 <span class="relative block h-5 w-6">
                   <span
                     :class="[
@@ -81,66 +80,65 @@ watch(open, (val) => {
                     ]"
                   />
                 </span>
-              </button>
+            </button>
 
+          </div>
+
+
+        </div>
+      </div>
+
+      <transition name="menu">
+        <div
+          v-if="open"
+          class="absolute z-20 left-0 top-0   w-full bg-secondary-medium-white p-6 text-primary-muted shadow-xl h-screen"
+          @click="close"
+        >
+          <div
+            class=""
+            @click.stop
+          >
+            <div class="pt-[100px] flex flex-col gap-4 text-[15px] container">
+              <router-link
+                to="/home"
+                class="active"
+                @click="close"
+              >Home
+              </router-link>
+              <router-link
+                to="#"
+                @click="close"
+              >About
+              </router-link>
+              <router-link
+                to="#"
+                @click="close"
+              >How it works
+              </router-link>
+              <router-link
+                to="#"
+                @click="close"
+              >Token design
+              </router-link>
+              <router-link
+                to="#"
+                @click="close"
+              >YARD flywheel
+              </router-link>
+
+
+              <BaseButton
+                view="primary"
+                class="block "
+              >
+                Connect
+              </BaseButton>
             </div>
-
-
           </div>
         </div>
-
-        <transition name="menu">
-          <div
-            v-if="open"
-            class="absolute z-20 left-0 top-0   w-full bg-secondary-medium-white p-6 text-primary-muted shadow-xl h-screen"
-            @click="close"
-          >
-            <div
-              class=""
-              @click.stop
-            >
-              <div class="pt-[100px] flex flex-col gap-4 text-[15px] container">
-                <router-link
-                  to="/home"
-                  class="active"
-                  @click="close"
-                  >Home
-                </router-link>
-                <router-link
-                  to="#"
-                  @click="close"
-                  >About
-                </router-link>
-                <router-link
-                  to="#"
-                  @click="close"
-                  >How it works
-                </router-link>
-                <router-link
-                  to="#"
-                  @click="close"
-                  >Token design
-                </router-link>
-                <router-link
-                  to="#"
-                  @click="close"
-                  >YARD flywheel
-                </router-link>
-
-
-                <BaseButton
-                  view="primary"
-                  class="block "
-                >
-                  Connect
-                </BaseButton>
-              </div>
-            </div>
-          </div>
-        </transition>
-      </div>
-    </header>
-  </div>
+      </transition>
+    </div>
+  </header>
 </template>
 
 <style scoped>

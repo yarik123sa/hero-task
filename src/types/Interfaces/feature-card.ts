@@ -3,7 +3,7 @@ export interface IFeatureCard {
   alt?: string;
   title?: string;
   step?: number;
-  description?: {
+  description: {
     title?: string;
     text?: string;
   }
